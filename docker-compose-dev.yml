@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: api
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./api:/usr/src/app
+      - /usr/app/node_modules
+    ports:
+      - "80:3000"
+    restart: unless-stopped
+    env_file:
+      - ./.env.dev
+    command: yarn run dev
+    container_name: "express-ts-api-dev"
