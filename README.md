@@ -1,28 +1,34 @@
 # Aplicación API básica de Express
 
-**IDEs:**
-
-![Webstorm][webstorm-badge] ![Visual Studio Code][vscode-badge]
-
-**Lenguajes utilizados**
-
-![Typescript][typescript-badge]
-
-**Frameworks**
-
-![Node.js][node-badge] ![Express.js][express-badge]
-
-**Utilidades de desarrollo**
-
-![Docker][docker-badge]
-
-**Gestión de paquetes**
-
-![Yarn][yarn-badge]
-
 ## Descripción
 
 Aplicación API básica utilizando Express con Typescript, y Docker para el desarrollo.
+
+## Detalles
+
+|                              |                                                                 |
+| ---------------------------- | --------------------------------------------------------------- |
+| **IDE**                      | ![Webstorm][webstorm-badge] ![Visual Studio Code][vscode-badge] |
+| **Lenguajes**                | ![Typescript][typescript-badge]                                 |
+| **Frameworks**               | ![Node.js][node-badge] ![Express.js][express-badge]             |
+| **Utilidades de desarrollo** | ![Docker][docker-badge]                                         |
+| **Package Manager**          | ![Yarn][yarn-badge]                                             |
+
+## Estructura
+
+### API
+
+#### Scripts en `package.json`
+
+```bash
+yarn run <comando>
+```
+
+| Comando | Descripción                                  |
+| ------- | -------------------------------------------- |
+| `start` | Inicia la aplicación compilada               |
+| `dev`   | Inicia la aplicación en modo de desarrollo   |
+| `build` | Compila los archivos Typescript a Javascript |
 
 [typescript-badge]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [express-badge]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
