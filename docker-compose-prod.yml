@@ -9,10 +9,9 @@ services:
       - ./api:/usr/src/app
       - /usr/app/node_modules
     ports:
-      - "4000:4000"
+      - '4000:4000'
     restart: unless-stopped
     env_file:
       - ./.env.prod
     command: node dist/app.js
-    container_name: "express-ts-api-prod"
-
+    container_name: 'express-ts-api-prod'
