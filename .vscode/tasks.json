@@ -1,0 +1,55 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Docker up dev",
+            "type": "docker-compose",
+            "dockerCompose": {
+                "up": {
+                    "detached": true,
+                    "build": true
+                },
+                "files": ["${workspaceFolder}/docker-compose-dev.yml"],
+                "envFile": "${workspaceFolder}/.env.dev"
+            }
+        },
+        {
+            "label": "Docker down dev",
+            "type": "docker-compose",
+            "dockerCompose": {
+                "down": {
+                    "removeImages": "local",
+                    "removeVolumes": true
+                },
+                "files": ["${workspaceFolder}/docker-compose-dev.yml"],
+                "envFile": "${workspaceFolder}/.env.dev"
+            }
+        },
+        {
+            "label": "Docker up prod",
+            "type": "docker-compose",
+            "dockerCompose": {
+                "up": {
+                    "detached": true,
+                    "build": true
+                },
+                "files": ["${workspaceFolder}/docker-compose-prod.yml"],
+                "envFile": "${workspaceFolder}/.env.prod"
+            }
+        },
+        {
+            "label": "Docker down prod",
+            "type": "docker-compose",
+            "dockerCompose": {
+                "down": {
+                    "removeImages": "local",
+                    "removeVolumes": true
+                },
+                "files": ["${workspaceFolder}/docker-compose-prod.yml"],
+                "envFile": "${workspaceFolder}/.env.prod"
+            }
+        }
+    ]
+}
